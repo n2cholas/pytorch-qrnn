@@ -100,7 +100,7 @@ class QRNNLayer(nn.Module):
 
         # Apply (potentially optional) output gate
         if self.output_gate:
-            H = torch.nn.functional.sigmoid(O) * C
+            H = torch.sigmoid(O) * C
         else:
             H = C
 
